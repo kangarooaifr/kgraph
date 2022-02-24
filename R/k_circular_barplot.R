@@ -1,33 +1,13 @@
 
 
-
-library(dplyr)
-library(ggplot2)
-library(stringr)
-#
-# # download and cast data
-# hike_data <- readr::read_rds(file = "~/Work/R/Library/Packages/kgraph/R/hike_data.rds")
-# hike_data$region <- as.factor(word(hike_data$location, 1, sep = " -- "))
-# hike_data$length_num <- as.numeric(sapply(strsplit(hike_data$length, " "), "[[", 1))
-#
-# # prepare data
-# plot_df <- hike_data %>%
-#   group_by(region) %>%
-#   summarise(
-#     sum_length = sum(length_num),
-#     mean_gain = mean(as.numeric(gain)),
-#     n = n()
-#   ) %>%
-#   mutate(mean_gain = round(mean_gain, digits = 0))
-
-
-foo <<- data.frame(category = c("draft", "planned", "inwork", "done"),
-                      nb = c(400, 300, 1000, 1500),
-                      mean = c(0, 1500, 1790, 2789),
-                      progress = c(0, 0, 53, 86))
-
-
-
+#' Title
+#'
+#' @param data a data.frame of the data to plot, with columns (xxx). Other columns will be ignored.
+#'
+#' @return a plot (from @ggplot function)
+#' @export k_circular_barplot
+#'
+#' @examples
 
 k_circular_barplot <- function(data){
 
@@ -35,14 +15,10 @@ k_circular_barplot <- function(data){
   if(is.null(data))
     stop("\n  data is NULL", call. = TRUE)
 
-
   # -------------------------------------------------
   title = "Task status"
   subtitle = "This Visualisation shows the amout of tasks per status."
-
-
   font_family <- "Calibri"
-
   # -------------------------------------------------
 
   # -- build plot
@@ -91,7 +67,7 @@ k_circular_barplot <- function(data){
 
 
     # Make it circular!
-    plt <- plt + coord_polar(theta = "y")
+    plt <- plt + coord_polar()
 
 
     # Annotate
@@ -202,7 +178,3 @@ k_circular_barplot <- function(data){
 
 
 }
-
-k_circular_barplot(plot_df)
-
-
