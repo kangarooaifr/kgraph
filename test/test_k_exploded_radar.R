@@ -1,3 +1,7 @@
+
+# -- load package
+library(kgraph)
+
 # -- create fake data
 data <- data.frame(category = c("Draft", "Plan", "In Work", "Done"),
                    nb = c(4,3, 5, 7),

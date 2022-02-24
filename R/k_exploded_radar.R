@@ -15,6 +15,8 @@
 #' @param progress_point_color the desired color for the point. DEFAULT = "black.
 #'
 #' @return a plot (from @ggplot function)
+#'
+#' @import ggplot2
 #' @export k_exploded_radar
 #'
 #' @examples

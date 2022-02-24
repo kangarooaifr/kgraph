@@ -2,7 +2,7 @@
 % Please edit documentation in R/k_exploded_radar.R
 \name{k_exploded_radar}
 \alias{k_exploded_radar}
-\title{Title}
+\title{Exploded Radar Plot}
 \usage{
 k_exploded_radar(
   data,
@@ -45,5 +45,5 @@ k_exploded_radar(
 a plot (from @ggplot function)
 }
 \description{
-Title
+Exploded Radar Plot
 }
