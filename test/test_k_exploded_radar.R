@@ -1,5 +1,6 @@
 
 # -- load package
+library(ggplot2)
 library(kgraph)
 
 # -- create fake data

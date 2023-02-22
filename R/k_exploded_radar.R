@@ -90,8 +90,14 @@ k_exploded_radar <- function(data, title = NULL, width = 0.25, color = "#C06C84"
     # -- Set title & center (NULL will be ignored)
     labs(title = title) +
     theme(
-      plot.title = element_text(hjust = 0.5))
+      plot.title = element_text(hjust = 0.5)) +
 
+    # -- Setup custom grid
+    theme(panel.grid = element_line(color = "grey")) +
+
+    # -- remove background
+    theme(panel.background = element_blank(),
+          plot.background = element_blank())
 
 }
 
