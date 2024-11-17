@@ -1,12 +1,12 @@
 Package: kgraph
-Title: Builds Custom Charts
+Title: Custom Graph Functions
 Version: 0.0.0.9000
-Authors@R: person(given = "Kangaroo",
-           family = "AI",
+Authors@R: person(given = "Philippe",
+           family = "Peret",
            role = c("aut", "cre"),
-           email = "kangaroo.ai@kangaroo-ai.fr",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: This package contains plot functions.
+           email = "philippe.peret@hotmail.com",
+           comment = c(ORCID = "0009-0003-9666-7490"))
+Description: This package contains plot functions
 License: GPL (>=3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
