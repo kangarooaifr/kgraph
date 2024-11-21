@@ -22,7 +22,7 @@ library(ggplot2)
 library(ggpattern)
 library(magrittr)
 
-eggplant_smooth <- function(data){
+eggplant_smooth <- function(data, span = 0.75){
 
   # -- select max / mins
   min_max <- rbind(head(data[order(data$y, decreasing = T), ], n = 2),
@@ -78,6 +78,7 @@ eggplant_smooth <- function(data){
         size = 3,
         colour = "black",
         alpha = 0.3,
+        span = span,
         se = FALSE),
       colour = "black", sigma = 5, expand = 0) +
 
@@ -88,6 +89,7 @@ eggplant_smooth <- function(data){
             y = y),
         size = 2,
         colour = color_yellow,
+        span = span,
         se = FALSE),
       colour = color_yellow, sigma = 2, expand = 0) +
 
@@ -97,7 +99,8 @@ eggplant_smooth <- function(data){
           y = y,
           color = ..y..),
       size = 1.5,
-      se = FALSE) +
+      se = FALSE,
+      span = span) +
 
     # -- gradient
     scale_colour_gradient(low = color_pink, high = color_orange) +
